@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pps-preprod-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pps-preprod-ui
+  template:
+    metadata:
+      labels:
+        app: pps-preprod-ui
+    spec:
+      containers:
+        - name: pps-preprod-ui
+          image: us-east4-docker.pkg.dev/ea-pps-pre-prod/pps-preprod-artifact-repo/caesars-ui:latest
+          ports:
+            - containerPort: 80

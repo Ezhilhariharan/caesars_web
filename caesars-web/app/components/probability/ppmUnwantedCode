@@ -1,0 +1,143 @@
+        {/* <div
+                    onMouseOver={() => setMouseAction(d?.ppm_id)}
+                    onMouseLeave={() => setMouseAction("")}
+                    // className="w-[20%]"
+                  >
+                    {mouseAction === d?.ppm_id ? (
+                      <Tooltip placement="top" title={"Add Line"}>
+                        <Image
+                          src={AddPropActive}
+                          alt="notes"
+                          className=" cursor-pointer ml-2"
+                          width={15}
+                          height={15}
+                          onClick={() => addPropsMarket(d)}
+                        />
+                      </Tooltip>
+                    ) : (
+                      <Image
+                        src={AddPropBlur}
+                        alt="notes"
+                        className=" cursor-pointer ml-2"
+                        width={15}
+                        height={15}
+                      />
+                    )}
+                  </div> */}         {/* <td
+                className="w-28 border-r flex justify-center items-center"
+                rowSpan={d?.odds?.data?.length}
+                style={{
+                  height: `${d?.odds?.data?.length * 50}px`,
+                }}
+              >
+                {d?.ppmp_status ? d?.ppmp_status : "-"}
+              </td> */}
+                       {/* <Image
+                            src={Minus}
+                            alt='notes'
+                            className='cursor-pointer'
+                            width={20}
+                            height={20}
+                            onClick={() =>
+                              odd?.over && playerPropOver(odd, 'minus')
+                            }
+                          /> */}
+                                   // <input
+                            //   placeholder='-'
+                            //   type='text'
+                            //   className={`w-full text-center rounded-[5px] py-2 border border-transparent focus:border-green-500 invalid:border-red-500 focus-within:invalid:border-red-500 invalid:showUpdateBtn`}
+                            //   name={'over'}
+                            //   value={odd?.over}
+                            //   // pattern={"^[0-9]+(\\.[0-9]{1,2})$"}
+                            //   pattern={
+                            //     selectedOdds === 'Decimal Odds'
+                            //       ? // ? '^(d)*(.)([0-9]{1,2})?$'
+                            //         '^[0-9]+(\\.[0-9]{1,2})$'
+                            //       : '^-?(?:[0-9]+(?:.[0-9]+)?|.[0-9]+)?$'
+                            //   }
+                            //   onChange={(e) =>
+                            //     handleUnderAndOver(e.target.value, odd, 'over')
+                            //   }
+                            //   // required
+                            // />
+                                   {/* <div>{odd?.over ? odd?.over : "-"}</div> */}
+                          {/* <Image
+                            src={Add}
+                            alt='notes'
+                            className='cursor-pointer'
+                            width={20}
+                            height={20}
+                            onClick={() =>
+                              odd?.over && playerPropOver(odd, 'plus')
+                            }
+                          /> */}
+                                       {/* <Image
+                            src={Minus}
+                            alt='notes'
+                            className='cursor-pointer'
+                            width={20}
+                            height={20}
+                            onClick={() =>
+                              odd?.under && playerPropUnder(odd, 'minus')
+                            }
+                          /> */}
+                                          // <input
+                            //   placeholder='-'
+                            //   type='text'
+                            //   className={`w-full text-center rounded-[5px] py-2 border border-transparent focus:border-green-500 invalid:border-red-500 focus-within:invalid:border-red-500 invalid:showUpdateBtn`}
+                            //   name={'under'}
+                            //   value={odd?.under}
+                            //   // pattern={"^[0-9]+(\\.[0-9]{1,2})$"}
+                            //   pattern={
+                            //     selectedOdds === 'Decimal Odds'
+                            //       ? // ? '^(d)*(.)([0-9]{1,2})?$'
+                            //         '^[0-9]+(\\.[0-9]{1,2})$'
+                            //       : '^-?(?:[0-9]+(?:.[0-9]+)?|.[0-9]+)?$'
+                            //   }
+                            //   onChange={(e) =>
+                            //     handleUnderAndOver(e.target.value, odd, 'under')
+                            //   }
+                            //   // required
+                            // />
+                                        {/* <div>{odd?.under ? odd?.under : "-"}</div> */}
+                          {/* <Image
+                            src={Add}
+                            alt='notes'
+                            className='cursor-pointer'
+                            width={20}
+                            height={20}
+                            onClick={() =>
+                              odd?.under && playerPropUnder(odd, 'plus')
+                            }
+                          /> */}
+                                       {/* <td className="w-32 border-r">
+                        {odd?.projection_mean ? odd?.projection_mean : "-"}
+                      </td>
+                      <td className="w-36 border-r">
+                        {odd?.projection_median ? odd?.projection_median : "-"}
+                      </td> */}
+                             {/* {odd?.ppmp_status === 2 ? (
+                            "Suspended"
+                          ) : (
+                            <> */}
+                                            {/* <Popover
+                            content={
+                              <div
+                                className="p-2 text-base text-[#F43F5E] font-normal cursor-pointer"
+                                onClick={() => handleSuspend(odd)}
+                              >
+                                Suspend
+                              </div>
+                            }
+                            trigger="hover"
+                          >
+                            <Image
+                              src={thickArrowDown}
+                              alt="thickArrowDown"
+                              className="cursor-pointer"
+                              width={20}
+                              height={20}
+                            />
+                          </Popover> */}
+                          {/* </>
+                          )} */}

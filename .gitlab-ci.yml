@@ -1,0 +1,38 @@
+stages:
+  - build
+
+build_docker_image:
+  stage: build
+  image: docker:stable
+
+  variables:
+    # DOCKER_HOST: tcp://docker:2375
+    # Set your GCP credentials as a secret variable in GitLab CI/CD settings
+    # GCP_KEY_FILE: ${PPS_GCP_KEY_FILE}  # Reference to your GCP service account key file
+    GCP_PROJECT_ID: Your-Project-ID  # Replace with your GCP Project ID
+    DOCKER_IMAGE_NAME: your-image-name
+    DOCKER_IMAGE_TAG: latest
+
+  before_script:
+    - echo "$GCP_KEY_FILE" > /gcp_key.json
+    # - export GOOGLE_APPLICATION_CREDENTIALS=/gcp_key.json
+    - echo "Logging in to GCP Docker registry..."
+    - echo $GCP_KEY_FILE | base64 -d > /gcp_key.json
+    # - gcloud auth activate-service-account --key-file=/gcp_key.json
+
+  script:
+    - echo "Building Docker image..."
+    # - docker build -t $DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG .
+    - echo "Tagging Docker image..."
+    # - docker tag $DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG gcr.io/$GCP_PROJECT_ID/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG
+    - echo "Pushing Docker image to GCP Artifact Registry..."
+    # - docker push gcr.io/$GCP_PROJECT_ID/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG
+    - echo "Docker image pushed to GCP Artifact Registry."
+
+  only:
+    - develop  # Run the pipeline only on the master branch (customize as needed)
+
+  # rules:
+  #   - if: $CI_COMMIT_BRANCH
+  #     exists:
+  #       - Dockerfile

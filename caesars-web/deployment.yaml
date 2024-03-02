@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pps-dev-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pps-dev-ui
+  template:
+    metadata:
+      labels:
+        app: pps-dev-ui
+    spec:
+      containers:
+        - name: pps-dev-ui
+          image: us-east4-docker.pkg.dev/ea-moneyball/pps-dev/caesars-ui:latest
+          ports:
+            - containerPort: 80

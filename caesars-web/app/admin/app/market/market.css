@@ -1,0 +1,7 @@
+.market-status button {
+  background-color: #c1c7d1 !important;
+}
+
+.market-status .ant-switch-checked {
+  background: #4285f4 !important;
+}

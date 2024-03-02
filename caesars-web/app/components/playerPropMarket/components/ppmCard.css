@@ -1,0 +1,11 @@
+.statusActive {
+  background: #4285f4 !important;
+}
+
+.statusInactive.ant-switch {
+  background: #e0e3e8 !important;
+}
+
+.ant-table-cell {
+  text-align: center;
+}

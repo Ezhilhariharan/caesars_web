@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0; */
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #f9f9f9;
+}
+.page-section-header {
+  font-weight: 600;
+  font-size: 24px;
+  /* Secondary/500 */
+  color: #141522;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+  visibility: hidden;
+  width: 0px;
+}
+
+.listScroll:hover::-webkit-scrollbar-thumb {
+  background: #4285f4 !important;
+}
+.listScroll::-webkit-scrollbar {
+  display: block !important;
+  width: 3px !important;
+  background: transparent !important;
+}
+
+.probabilityClamp {
+  /* width: clamp(1500px, 80%, 2000px); */
+  width: 100%;
+}
+
+.tableClamp {
+  width: clamp(1200px, 80%, 1500px);
+}
+
+/* input[type="checkbox"][disabled].ant-checkbox-inner {
+  background-color: red !important;
+}
+input[type="checkbox"]:not([disabled]) + label {
+  background-color: blue;
+} */
+
+.addMarket {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsisOne {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.elipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+input:focus {
+  outline: none;
+}
+
+DatePicker:focus {
+  outline: none;
+}
+
+.ant-popover-inner {
+  padding: 0 !important;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-dots ul {
+  height: 0px;
+}
+
+.slick-dots ul li div {
+  background: #4285f4;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.slick-dots ul li.slick-active div {
+  background: #4285f4;
+  opacity: 1;
+}
+
+.status-select > div {
+  height: 40px !important;
+  background-color: #fcfcfc !important;
+  border: 1px solid #eff1f4 !important;
+  border-radius: 4px !important;
+  outline: none !important;
+}
+
+.status-select > div > span:nth-child(2) {
+  line-height: 40px !important;
+  color: #141522 !important;
+  font-size: 14;
+  font-weight: 500;
+  padding: 0 10px !important;
+}
+
+/* .draggerListCss > div:nth-child(1) {
+  margin-bottom: 0px !important;
+  border: 1px solid blue;
+} */
+
+.rosterModal {
+  width: 85vw !important;
+  /* border: 1px solid red; */
+  height: 70vh;
+  /* min-width: 650px;
+  top: 240px;
+  right: 0%;
+  margin-bottom: 20px;
+  padding: 0 !important;
+  height: auto; */
+}
+
+.substitutionModal {
+  width: 40vw !important;
+  /* height: 45vh !important;
+  border: 1px solid red; */
+}
+.checkBoxCircle .ant-checkbox span.ant-checkbox-inner {
+  border-radius: 50% !important;
+  width: 18px;
+  height: 18px;
+}
+
+/* OTP fields  */
+.spine-button-none::-webkit-inner-spin-button,
+.spine-button-none::-webkit-outer-spin-button {
+  border: 1px solid red !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}

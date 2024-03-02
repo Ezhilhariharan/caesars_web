@@ -1,0 +1,21 @@
+.ppm-player-tab {
+  width: auto;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ppm-player-tab-active {
+  background-color: #f0f1f3;
+}
+
+.ant-dropdown-menu {
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.editable-row:has(.ant-input-status-error) {
+  border: 1px solid green !important;
+}

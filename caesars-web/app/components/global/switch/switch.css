@@ -1,0 +1,52 @@
+input[type='checkbox'].radioButton {
+  opacity: 0;
+  position: absolute;
+}
+
+input[type='checkbox'].radioButton + label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input[type='checkbox'].radioButton + label::before {
+  content: '';
+  width: 2em;
+  height: 0.9em;
+  background-color: #a6a9af;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type='checkbox'].radioButton + label::after {
+  content: '\2715';
+  width: 1.3em;
+  height: 1.3em;
+  font-size: 0.6em;
+  /* font-weight: 900; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1em;
+  cursor: pointer;
+  position: absolute;
+  left: 0.1em;
+  transition: all 0.2s ease;
+}
+
+input[type='checkbox'].radioButton:checked + label::before {
+  background-color: #4285f4;
+  transition: all 0.2s ease;
+}
+input[type='checkbox'].radioButton:checked + label::after {
+  content: '\2714';
+  background-color: #fff;
+  left: 1.9em;
+  transition: all 0.2s ease;
+}
+
+input[type='checkbox'].radioButton:checked + label {
+  color: #4285f4;
+}
